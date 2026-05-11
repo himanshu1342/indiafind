@@ -1,0 +1,145 @@
+.hero {
+  background: var(--navy);
+  padding: 72px 5% 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(255,107,0,0.18) 0%, transparent 65%),
+              radial-gradient(ellipse at 80% 80%, rgba(18,136,7,0.12) 0%, transparent 55%);
+  pointer-events: none;
+}
+.heroBadge {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(255,107,0,0.15);
+  border: 1px solid rgba(255,107,0,0.3);
+  color: #FF8C2E;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 5px 14px; border-radius: 100px;
+  margin-bottom: 20px; position: relative;
+}
+.heroTitle {
+  font-family: 'Sora', sans-serif;
+  font-size: clamp(30px, 5vw, 56px);
+  font-weight: 800; color: #fff; line-height: 1.1;
+  margin-bottom: 16px; position: relative;
+}
+.heroTitle em { color: var(--saffron); font-style: normal; }
+.heroSub {
+  font-size: 17px; color: rgba(255,255,255,0.6);
+  max-width: 520px; margin: 0 auto 36px; line-height: 1.6;
+  position: relative;
+}
+.searchBar {
+  display: flex; max-width: 700px; margin: 0 auto 16px;
+  background: #fff; border-radius: 14px; overflow: hidden;
+  box-shadow: 0 4px 40px rgba(0,0,0,0.3); position: relative;
+}
+.searchSelect {
+  border: none; outline: none; padding: 0 16px;
+  font-size: 14px; font-weight: 500; color: var(--gray-800);
+  background: var(--gray-50); border-right: 1px solid var(--gray-100);
+  min-width: 150px; cursor: pointer;
+}
+.searchInput {
+  flex: 1; border: none; outline: none;
+  padding: 18px 20px; font-size: 15px; color: var(--gray-800);
+}
+.searchInput::placeholder { color: var(--gray-400); }
+.searchBtn {
+  background: var(--saffron); border: none; color: #fff;
+  padding: 0 28px; font-family: 'Sora', sans-serif;
+  font-size: 14px; font-weight: 700; cursor: pointer;
+  transition: background 0.2s;
+}
+.searchBtn:hover { background: var(--saffron-light); }
+.popular {
+  font-size: 13px; color: rgba(255,255,255,0.35); position: relative;
+}
+.popular a { color: rgba(255,255,255,0.5); transition: color 0.2s; }
+.popular a:hover { color: var(--saffron); }
+.stats {
+  display: flex; gap: 32px; justify-content: center; flex-wrap: wrap;
+  margin-top: 44px; position: relative;
+}
+.stat { text-align: center; }
+.stat strong { display: block; font-family: 'Sora', sans-serif; font-size: 26px; font-weight: 800; color: #fff; }
+.stat span { font-size: 12px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.06em; }
+
+/* SECTIONS */
+.section { padding: 56px 5%; }
+.featuredSection { padding: 48px 5%; background: var(--gray-50); }
+.sectionHeader { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 28px; }
+.sectionTitle { font-family: 'Sora', sans-serif; font-size: 26px; font-weight: 700; color: var(--navy); }
+.sectionTitle span { color: var(--saffron); }
+.seeAll { font-size: 13px; font-weight: 600; color: var(--saffron); }
+.seeAll:hover { text-decoration: underline; }
+
+/* CATEGORIES */
+.catGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 14px;
+}
+.catCard {
+  background: #fff; border: 1px solid var(--gray-100);
+  border-radius: var(--radius); padding: 20px 12px 16px;
+  text-align: center; cursor: pointer; transition: all 0.2s;
+  display: flex; flex-direction: column; align-items: center;
+}
+.catCard:hover { border-color: var(--saffron); box-shadow: var(--shadow-hover); transform: translateY(-3px); }
+.catIcon { font-size: 30px; margin-bottom: 10px; line-height: 1; }
+.catName { font-family: 'Sora', sans-serif; font-size: 13px; font-weight: 600; color: var(--gray-800); margin-bottom: 4px; }
+.catCount { font-size: 11px; color: var(--gray-400); }
+
+/* LISTINGS */
+.listingsGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 18px; }
+
+/* CITIES */
+.cityGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; }
+.cityCard {
+  background: #fff; border: 1px solid var(--gray-100); border-radius: var(--radius);
+  padding: 16px; display: flex; align-items: center; gap: 10px;
+  transition: all 0.2s;
+}
+.cityCard:hover { border-color: var(--saffron); box-shadow: var(--shadow-card); }
+.cityEmoji { font-size: 22px; flex-shrink: 0; }
+.cityName { font-family: 'Sora', sans-serif; font-size: 14px; font-weight: 600; color: var(--gray-800); }
+.cityState { font-size: 11px; color: var(--gray-400); margin-bottom: 2px; }
+.cityCount { font-size: 11px; color: var(--gray-400); }
+
+/* HOW */
+.howSection { background: var(--navy); padding: 56px 5%; }
+.howGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; margin-top: 28px; }
+.howCard {
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius); padding: 28px 22px;
+}
+.howNum { font-family: 'Sora', sans-serif; font-size: 40px; font-weight: 800; color: var(--saffron); opacity: 0.6; line-height: 1; margin-bottom: 14px; }
+.howTitle { font-family: 'Sora', sans-serif; font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+.howDesc { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.6; }
+
+/* PREMIUM CTA */
+.premiumCta {
+  background: linear-gradient(135deg, var(--gold-pale) 0%, #FFF9E8 100%);
+  border: 1.5px solid var(--gold); border-radius: 20px;
+  padding: 40px; text-align: center; margin: 0 5% 48px;
+}
+.premiumCta h2 { font-family: 'Sora', sans-serif; font-size: 26px; font-weight: 800; color: var(--navy); margin-bottom: 10px; }
+.premiumCta p { font-size: 15px; color: var(--gray-600); margin-bottom: 24px; }
+.ctaBtn {
+  display: inline-block; background: var(--saffron); color: #fff;
+  border-radius: 10px; padding: 14px 32px;
+  font-family: 'Sora', sans-serif; font-size: 15px; font-weight: 700;
+  transition: background 0.2s;
+}
+.ctaBtn:hover { background: var(--saffron-light); }
+
+@media (max-width: 600px) {
+  .searchBar { flex-direction: column; border-radius: 12px; }
+  .searchSelect { border-right: none; border-bottom: 1px solid var(--gray-100); min-width: unset; padding: 12px 16px; }
+  .searchBtn { padding: 14px; border-radius: 0 0 12px 12px; }
+}

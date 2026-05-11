@@ -1,0 +1,47 @@
+.page { padding: 48px 0 80px; background: var(--gray-50); min-height: 80vh; }
+.container { max-width: 700px; margin: 0 auto; padding: 0 5%; }
+
+.header { text-align: center; margin-bottom: 32px; }
+.header h1 { font-family: 'Sora', sans-serif; font-size: 32px; font-weight: 800; color: var(--navy); margin-bottom: 10px; }
+.header p { font-size: 15px; color: var(--gray-400); }
+
+.formCard { background: #fff; border: 1px solid var(--gray-100); border-radius: var(--radius); padding: 32px; }
+.formSection { margin-bottom: 28px; padding-bottom: 28px; border-bottom: 1px solid var(--gray-100); }
+.formSection:last-of-type { border-bottom: none; margin-bottom: 0; }
+.formSectionTitle { font-family: 'Sora', sans-serif; font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 18px; }
+
+.field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+.field label { font-size: 13px; font-weight: 500; color: var(--gray-600); }
+.field input, .field select, .field textarea {
+  border: 1px solid var(--gray-200); border-radius: 10px;
+  padding: 12px 14px; font-size: 14px; color: var(--gray-800);
+  outline: none; transition: border-color 0.2s;
+  background: #fff; width: 100%;
+}
+.field input:focus, .field select:focus, .field textarea:focus { border-color: var(--saffron); }
+.field textarea { resize: vertical; }
+
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.hint { font-weight: 400; color: var(--gray-400); }
+
+.error { background: #FEE; border: 1px solid #FBB; border-radius: 10px; padding: 12px 16px; font-size: 13px; color: #C00; margin-bottom: 16px; }
+
+.submitBtn {
+  width: 100%; background: var(--saffron); color: #fff; border: none;
+  border-radius: 12px; padding: 16px; font-family: 'Sora', sans-serif;
+  font-size: 16px; font-weight: 700; cursor: pointer; transition: background 0.2s;
+  margin-top: 8px;
+}
+.submitBtn:hover:not(:disabled) { background: var(--saffron-light); }
+.submitBtn:disabled { opacity: 0.6; cursor: not-allowed; }
+.submitNote { text-align: center; font-size: 12px; color: var(--gray-400); margin-top: 10px; }
+
+.successPage { min-height: 70vh; display: flex; align-items: center; justify-content: center; }
+.successBox { text-align: center; max-width: 420px; padding: 40px; background: #fff; border-radius: 20px; border: 1px solid var(--gray-100); box-shadow: var(--shadow-card); }
+.successIcon { font-size: 56px; margin-bottom: 16px; }
+.successBox h2 { font-family: 'Sora', sans-serif; font-size: 24px; font-weight: 800; color: var(--navy); margin-bottom: 12px; }
+.successBox p { font-size: 14px; color: var(--gray-400); line-height: 1.7; margin-bottom: 24px; }
+.homeBtn { display: inline-block; background: var(--saffron); color: #fff; border-radius: 10px; padding: 12px 28px; font-weight: 700; font-size: 14px; }
+.homeBtn:hover { background: var(--saffron-light); }
+
+@media (max-width: 600px) { .row { grid-template-columns: 1fr; } }
